@@ -1,4 +1,4 @@
-*Note* This was the first time I used object-oriented programming. I felt it was extremely necessary for the complexity of this project, and it was fun to learn OOP in the process of creating this.
+*Note:* This was the first time I used object-oriented programming. I felt it was extremely necessary for the complexity of this project, and it was fun to learn OOP in the process.
 
 # College Football Play-by-Play Simulation
 
