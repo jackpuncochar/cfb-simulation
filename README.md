@@ -13,17 +13,17 @@ Continuing to build on *FireBoop*'s code, I deployed several machine-learning mo
 
 ## Project Structure
 - Load play-by-play data since 2018 using R
-- organize_data.py handles data processing
-- Play-by-play simulation
-    - Game class handles game rules, plays, and calls machine learning models from predictors.py
-    - Player class and subclasses update player stats and calculate fantasy points
-    - PlayerLoader class gets only the players on a given slate of games using an external data source
-    - PlayerUsageManager handles historical player usage data also pulled from cfbfastR; these inputs help determine the probability that an offensive player is involved in a play
-    - GameSimulator class pulls everything together and simulates each game in the slate 'n' times and outputs fantasy statistics
+- *organize_data.py* handles data processing
+- Play-by-play simulation (*CFB Sim.ipynb*)
+    - 'Game' class handles game rules, plays, and calls machine learning models from *predictors.py*
+    - 'Player' class and subclasses update player stats and calculate fantasy points
+    - 'PlayerLoader' class gets only the players on a given slate of games using an external data source
+    - 'PlayerUsageManager' handles historical player usage data also pulled from *cfbfastR*; these inputs help determine the probability that an offensive player is involved in a play
+    - 'GameSimulator' class pulls everything together and simulates each game in the slate *n* times and outputs fantasy statistics
 
 ## Technologies Used
-- R : loads large amount of data using the built-in methods of the cfbfastR package
-- Python : object-oriented programming code to build play-by-play simulation, organize data from R load, and generate optimal lineups for daily fantasy
+- R - loads large amount of data using the built-in methods of the cfbfastR package
+- Python - object-oriented programming code to build play-by-play simulation, organize data from R load, and generate optimal lineups for daily fantasy
     - pandas, numpy, and statsmodels libraries
 
 ## Future Work
@@ -37,4 +37,4 @@ The number of simulations needed to produce a true distribution of outcomes is v
 Injuries and player name variations across data sources cause issues. Accounting for player injuries means I have to manually adjust player usage i.e. give an injured player's rushing volume to the backup running back. The ultimate goal of this project was to reduce my financial *and* mental costs. Projection sites are worth the value because they do this error-handling work. Automating tedious tasks like this is necessary so I can spend my time building daily fantasy lineups.
 
 ### Improve outputs
-Each simulation produces a set of actual game statistics. Currently, I send the results to an excel file, but I imagine there is a better way to do this in such a way to easily access and summarize the data.
+Each simulation produces a set of actual game statistics. Currently, I send the results to an excel file, but I imagine there is a better way to do this in a way to easily access and summarize the data.
